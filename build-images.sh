@@ -102,9 +102,11 @@ evaluate_script_arguments() {
 }
 
 # Here the programme begins
-if [ 0 -eq $# ]; then
-  print_used_proxies
-  build_all_docker_images
-elif evaluate_script_arguments "$@"; then
-  build_all_docker_images
-fi
+# if [ 0 -eq $# ]; then
+#   print_used_proxies
+#   build_all_docker_images
+# elif evaluate_script_arguments "$@"; then
+#   build_all_docker_images
+# fi
+
+build_docker_image "gateway:gateway"
